@@ -1,0 +1,26 @@
+{
+  "customer": {
+    "name": "Customer Name",
+    "address": "Customer Address"
+  },
+  "orders": [{
+    "quantity": 15,
+    "unit": "kg",
+    "description": "Live eels, 500 grams per piece",
+    "unit_price": 1200
+  },{
+    "quantity": 15,
+    "unit": null,
+    "description": "Less bulk order discount",
+    "unit_price": -50
+  },{
+    "quantity": null,
+    "unit": null,
+    "description": "Less advance payment",
+    "unit_price": -7200
+  }],
+  "vat": null,
+  "downpayment": 10050
+}
+
+
