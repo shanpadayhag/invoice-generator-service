@@ -1,4 +1,4 @@
-package com.arlii.mainbe.dtos.requests.calculate;
+package com.arlii.mainbe.dtos.requests.export.msword;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -9,16 +9,16 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-public class CalculateRequestDto {
+public class MSWordExportRequestDto {
   private BigDecimal vat;
   private BigDecimal downpayment;
 
   @Valid
   @NotNull(message = "Customer information is required.")
-  private CalculateCustomerDto customer;
+  private MSWordExportCustomerDto customer;
 
   @Valid
-  @NotNull(message = "Order line items cannot be null.")
-  @Size(min = 1, message = "At least one order line item is required.")
-  private List<CalculateOrderLineItemDto> orderLineItem;
+  @NotNull(message = "Orders cannot be null.")
+  @Size(min = 1, message = "At least one order is required.")
+  private List<MSWordExportOrderLineItemDto> orders;
 }

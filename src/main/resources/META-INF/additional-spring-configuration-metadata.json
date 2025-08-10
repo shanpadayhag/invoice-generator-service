@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "company.name",
+      "type": "java.lang.String",
+      "description": "Company Name"
+    },
+    {
+      "name": "company.address",
+      "type": "java.lang.String",
+      "description": "Company Address"
+    },
+    {
+      "name": "company.email",
+      "type": "java.lang.String",
+      "description": "Company Email"
+    },
+    {
+      "name": "company.phone-number",
+      "type": "java.lang.String",
+      "description": "Company Phone Number"
+    }
+  ]
+}

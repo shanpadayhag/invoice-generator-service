@@ -1,10 +1,10 @@
-package com.arlii.mainbe.dtos.requests.calculate;
+package com.arlii.mainbe.dtos.requests.export.msword;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class CalculateCustomerDto {
+public class MSWordExportCustomerDto {
   @NotBlank(message="Customer name is required.")
   private String name;
 
