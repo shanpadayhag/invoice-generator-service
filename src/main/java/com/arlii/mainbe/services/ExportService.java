@@ -338,23 +338,29 @@ public class ExportService {
    */
   private void populateOrderDataRow(XWPFTableRow dataRow, MSWordExportOrderLineItemDto order, BigDecimal lineTotal) {
     String quantityStr = "";
+    String unitStr = "-";
     String unitPriceStr = "";
     String lineTotalStr;
 
     Integer orderQuantity = order.getQuantity();
+    String unit = order.getUnit();
     BigDecimal orderUnitPrice = order.getUnitPrice();
 
     if (orderQuantity != null) {
       quantityStr = orderQuantity.toString();
       unitPriceStr = formatDecimalForDisplay(orderUnitPrice);
       lineTotalStr = formatDecimalForDisplay(lineTotal);
+
+      if (unit != null)
+        unitStr = unit;
     } else {
       lineTotalStr = formatDecimalForDisplay(orderUnitPrice);
+      unitStr = "";
     }
 
     String[] cellData = {
         quantityStr,
-        order.getUnit(),
+        unitStr,
         order.getDescription(),
         unitPriceStr,
         lineTotalStr
