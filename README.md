@@ -1,3 +1,9 @@
+Create .env and fill in the values
+
+```sh
+cp .env.example .env
+```
+
 To run the code
 
 ```sh
